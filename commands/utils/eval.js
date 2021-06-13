@@ -1,7 +1,7 @@
 module.exports.run = async (client, message, args) => {
-    const allowedDevs = ['361645744001908736', '515204641450098704', '633730629560958976'];
+    const allowedDevs = ['779985841090330624'];
     if (!allowedDevs.includes(message.author.id)) {
-        return message.channel.send('This is a dev only command.');
+        return message.channel.send('❌ This is a dev only command.');
     }
     args = args.join(' ');
     try {
@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) => {
 };
 module.exports.config = {
     name: 'eval',   
-    aliases: [],
+    aliases: ["ev"],
 };
 
 function clean(text) {
@@ -31,3 +31,4 @@ function clean(text) {
     }
     else return text;
 }
+
